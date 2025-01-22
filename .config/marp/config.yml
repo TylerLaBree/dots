@@ -1,0 +1,4 @@
+allowLocalFiles: true
+pdf: true
+themeSet: /home/tyler/.config/marp/themes
+browserPath: /usr/bin/chromium-browser

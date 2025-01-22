@@ -1,0 +1,30 @@
+/*!
+ * @theme aegis
+ * @author Tyler LaBree
+ */
+
+@import 'gaia';
+
+$color-light: #faf4ed;
+$color-dark: #575279;
+$color-primary: #0288d1;
+$color-secondary: #81d4fa;
+
+:root {
+  font-size: 80px;
+}
+
+section {
+  font-size: 80px;
+  background: #faf4ed;
+  color: #575279;
+  width: 3840px;
+  height: 2160px;
+  padding: 100px 500px 100px 500px;
+}
+
+header,
+footer {
+  color : #575279;
+}
+

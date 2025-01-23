@@ -40,15 +40,15 @@ author = "Tyler"
 
 [group.daily]
 # Directories listed here will automatically use this group when creating notes.
-paths = ["journal/daily"]
+paths = ["daily-journal"]
 
 [group.dune-weekly]
-paths = ["journal/dune-weekly"]
+paths = ["dune-weekly-update"]
 
 [group.dune-weekly.note]
 filename = "{{format-date (date 'next wednesday') '%Y_W%W'}}"
 extension = "md"
-template = "dune-weekly.md"
+template = "weekly-update.md"
 
 [group.daily.note]
 # %Y-%m-%d is actually the default format, so you could use {{format-date now}} instead.
@@ -85,12 +85,9 @@ recents = "--sort created- --created-after 'last two weeks'"
 
 # COMMAND ALIASES
 [alias]
-
-plan = "zk new --no-input --date='tomorrow' $ZK_NOTEBOOK_DIR/journal/daily"
-
-dune = "zk new --no-input $ZK_NOTEBOOK_DIR/journal/dune-weekly"
-
-daily = "zk new --no-input $ZK_NOTEBOOK_DIR/journal/daily"
+plan = "zk new --no-input --date='tomorrow' $ZK_NOTEBOOK_DIR/daily-journal"
+daily = "zk new --no-input $ZK_NOTEBOOK_DIR/daily-journal"
+dune = "zk new --no-input $ZK_NOTEBOOK_DIR/dune-weekly-update"
 
 # Edit the last modified note.
 edlast = "zk edit --limit 1 --sort modified- $@"

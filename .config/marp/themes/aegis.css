@@ -5,10 +5,24 @@
 
 @import 'gaia';
 
-$color-light: #faf4ed;
-$color-dark: #575279;
-$color-primary: #0288d1;
-$color-secondary: #81d4fa;
+* {
+    --color-rosepine-base: #faf4ed;
+    --color-rosepine-surface: #fffaf3;
+    --color-rosepine-overlay: #f2e9e1;
+    --color-rosepine-muted: #9893a5;
+    --color-rosepine-subtle: #797593;
+    --color-rosepine-text: #575279;
+    --color-rosepine-love: #b4637a;
+    --color-rosepine-gold: #ea9d34;
+    --color-rosepine-rose: #d7827e;
+    --color-rosepine-pine: #286983;
+    --color-rosepine-foam: #56949f;
+    --color-rosepine-iris: #907aa9;
+    --color-rosepine-highlight-low: #f4ede8;
+    --color-rosepine-highlight-med: #dfdad9;
+    --color-rosepine-highlight-high: #cecacd;
+}
+
 
 :root {
   font-size: 80px;
@@ -25,6 +39,338 @@ section {
 
 header,
 footer {
+  font-size: 80px;
   color : #575279;
+  padding: 50px 50px 100px 50px;
+}
+
+a {
+    color: var(--color-rosepine-love) !important;
+}
+
+code {
+    all: unset !important;
+    font-family: 'Iosevka NFM SemiBold', monospace !important;
+    font-size: 40px;
+    background: var(--color-rosepine-overlay) !important;
+}
+
+pre,
+pre code {
+    all: unset !important;
+    border-radius: 8px;
+    font-family: 'Iosevka NFM SemiBold', monospace !important;
+}
+
+.hljs {
+    all: unset !important;
+    background: var(--color-rosepine-overlay) !important;
+    color: var(--color-rosepine-text) !important;
+}
+
+pre, pre code.hljs, .hljs { /* My fix for background color */
+    background-color: var(--color-rosepine-overlay) !important;
+    width: 100% !important;
+    display: block !important;
+    padding: 0.5em !important;
+    margin: 1em !important;
+    border-radius: 30px !important;
+}
+
+pre, pre code {
+    max-width: 2640px !important;
+}
+
+pre code.hljs {
+    display: block !important;
+    text-align: left !important;
+    text-indent: 0 !important;
+}
+
+pre > code {
+    font-size: 50px;
+    display: block;
+    overflow-x: auto;
+}
+
+pre {
+    &::part(auto-scaling) {
+        max-height: 1800px;
+    }
+}
+
+pre code.hljs {
+    display: block !important;
+    overflow-x: auto !important;
+    padding: 1em !important;
+}
+
+code.hljs {
+    padding: 3px 5px !important;
+}
+
+.hljs {
+    background: var(--color-rosepine-overlay) !important;
+}
+
+.hljs-keyword {
+    color: var(--color-rosepine-foam) !important;
+}
+
+.hljs,
+.hljs-subst {
+    color: var(--color-rosepine-text) !important;
+}
+
+.hljs-selector-tag {
+    color: var(--color-rosepine-foam) !important;
+}
+
+.hljs-selector-id {
+    color: var(--color-rosepine-iris) !important;
+    font-weight: 700
+}
+
+.hljs-selector-attr,
+.hljs-selector-class {
+    color: var(--color-rosepine-iris) !important;
+}
+
+.hljs-property,
+.hljs-selector-pseudo {
+    color: var(--color-rosepine-rose) !important;
+}
+
+.hljs-addition {
+    background-color: rgba(156, 207, 216, 0.5) !important;
+}
+
+.hljs-deletion {
+    background-color: rgba(235, 111, 146, .5) !important;
+}
+
+.hljs-built_in,
+.hljs-class,
+.hljs-type {
+    color: var(--color-rosepine-foam) !important;
+}
+
+.hljs-function,
+.hljs-function>.hljs-title,
+.hljs-title.hljs-function {
+    color: var(--color-rosepine-text) !important;
+}
+
+.hljs-keyword {
+    color: var(--color-rosepine-foam) !important;
+    font-weight: 900 !important;
+}
+
+.hljs-symbol  {
+    color: var(--color-rosepine-foam) !important;
+}
+
+.hljs-literal {
+    color: var(--color-rosepine-rose) !important;
+}
+
+.hljs-number {
+    color: var(--color-rosepine-gold) !important;
+}
+
+.hljs-regexp {
+    color: var(--color-rosepine-gold) !important;
+}
+
+.hljs-string {
+    color: var(--color-rosepine-gold) !important;
+}
+
+.hljs-title {
+    color: var(--color-rosepine-iris) !important;
+}
+
+.hljs-params {
+    color: var(--color-rosepine-text) !important;
+}
+
+.hljs-bullet {
+    color: var(--color-rosepine-foam) !important;
+}
+
+.hljs-code {
+    color: var(--color-rosepine-iris) !important;
+}
+
+.hljs-emphasis {
+    font-style: italic !important;
+}
+
+.hljs-formula {
+    color: var(--color-rosepine-iris) !important;
+}
+
+.hljs-strong {
+    font-weight: 700 !important;
+}
+
+.hljs-link:hover {
+    text-decoration: underline !important;
+}
+
+.hljs-comment,
+.hljs-quote {
+    color: var(--color-rosepine-muted) !important;
+}
+
+.hljs-doctag {
+    color: var(--color-rosepine-iris) !important;
+}
+
+.hljs-meta,
+.hljs-meta .hljs-keyword {
+    color: var(--color-rosepine-pine) !important;
+}
+
+.hljs-meta .hljs-string {
+    color: var(--color-rosepine-foam) !important;
+}
+
+.hljs-attr {
+    color: var(--color-rosepine-iris) !important;
+}
+
+.hljs-attribute {
+    color: var(--color-rosepine-text) !important;
+}
+
+.hljs-name {
+    color: var(--color-rosepine-foam) !important;
+}
+
+.hljs-section {
+    color: var(--color-rosepine-rose) !important;
+}
+
+.hljs-tag {
+    color: var(--color-rosepine-foam) !important;
+}
+
+.hljs-template-variable,
+.hljs-variable {
+    color: var(--color-rosepine-text) !important;
+}
+
+.hljs-template-tag {
+    color: var(--color-rosepine-pine) !important;
+}
+
+.language-abnf .hljs-attribute {
+    color: var(--color-rosepine-rose) !important;
+}
+
+.language-abnf .hljs-symbol {
+    color: var(--color-rosepine-gold) !important;
+}
+
+.language-apache .hljs-attribute {
+    color: var(--color-rosepine-rose) !important;
+}
+
+.language-apache .hljs-section {
+    color: var(--color-rosepine-foam) !important;
+}
+
+.language-arduino .hljs-built_in {
+    color: var(--color-rosepine-rose) !important;
+}
+
+.language-aspectj .hljs-meta {
+    color: var(--color-rosepine-love) !important;
+}
+
+.language-aspectj>.hljs-title {
+    color: var(--color-rosepine-rose) !important;
+}
+
+.language-bnf .hljs-attribute {
+    color: var(--color-rosepine-iris) !important;
+}
+
+.language-clojure .hljs-name {
+    color: var(--color-rosepine-rose) !important;
+}
+
+.language-clojure .hljs-symbol {
+    color: var(--color-rosepine-gold) !important;
+}
+
+.language-coq .hljs-built_in {
+    color: var(--color-rosepine-rose) !important;
+}
+
+.language-cpp .hljs-meta .hljs-string {
+    color: var(--color-rosepine-iris) !important;
+}
+
+.language-css .hljs-built_in {
+    color: var(--color-rosepine-rose) !important;
+}
+
+.language-css .hljs-keyword {
+    color: var(--color-rosepine-love) !important;
+}
+
+.language-diff .hljs-meta,
+.language-ebnf .hljs-attribute {
+    color: var(--color-rosepine-iris) !important;
+}
+
+.language-glsl .hljs-built_in {
+    color: var(--color-rosepine-rose) !important;
+}
+
+.language-groovy .hljs-meta:not(:first-child),
+.language-haxe .hljs-meta,
+.language-java .hljs-meta {
+    color: var(--color-rosepine-love) !important;
+}
+
+.language-ldif .hljs-attribute {
+    color: var(--color-rosepine-iris) !important;
+}
+
+.language-lisp .hljs-name,
+.language-lua .hljs-built_in,
+.language-moonscript .hljs-built_in,
+.language-nginx .hljs-attribute {
+    color: var(--color-rosepine-rose) !important;
+}
+
+.language-nginx .hljs-section {
+    color: var(--color-rosepine-pine) !important;
+}
+
+.language-pf .hljs-built_in,
+.language-processing .hljs-built_in {
+    color: var(--color-rosepine-rose) !important;
+}
+
+.language-scss .hljs-keyword,
+.language-stylus .hljs-keyword {
+    color: var(--color-rosepine-foam) !important;
+}
+
+.language-swift .hljs-meta {
+    color: var(--color-rosepine-love) !important;
+}
+
+.language-vim .hljs-built_in {
+    color: var(--color-rosepine-rose) !important;
+    font-style: italic !important;
+}
+
+.language-yaml .hljs-meta {
+    color: var(--color-rosepine-love) !important;
 }
 

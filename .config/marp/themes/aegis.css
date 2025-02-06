@@ -25,23 +25,35 @@
 
 
 :root {
-  font-size: 80px;
 }
 
 section {
-  font-size: 80px;
-  background: #faf4ed;
-  color: #575279;
-  width: 3840px;
-  height: 2160px;
-  padding: 100px 500px 100px 500px;
+    font-size: 72px;
+    background: #faf4ed;
+    color: #575279;
+    width: 3840px;
+    height: 2160px;
+    padding: 100px 500px 100px 500px;
+    font-family: 'Adwaita Sans' !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
 }
 
 header,
 footer {
-  font-size: 80px;
-  color : #575279;
-  padding: 50px 50px 100px 50px;
+    font-size: 72px;
+    color : #575279;
+    padding: 50px 50px 100px 50px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Adwaita Sans' !important;
+    font-weight: 800 !important;
 }
 
 a {
@@ -50,7 +62,8 @@ a {
 
 code {
     all: unset !important;
-    font-family: 'Iosevka NFM SemiBold', monospace !important;
+    font-family: 'Adwaita Mono', 'Iosevka NFM SemiBold', monospace !important;
+    font-weight: 700 !important;
     font-size: 40px;
     background: var(--color-rosepine-overlay) !important;
 }
@@ -59,7 +72,8 @@ pre,
 pre code {
     all: unset !important;
     border-radius: 8px;
-    font-family: 'Iosevka NFM SemiBold', monospace !important;
+    font-family: 'Adwaita Mono', 'Iosevka NFM SemiBold', monospace !important;
+    font-weight: 700 !important;
 }
 
 .hljs {

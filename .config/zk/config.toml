@@ -1,6 +1,6 @@
 # NOTEBOOK SETTINGS
 [notebook]
-dir = "~/Documents/ZK_Journal"
+dir = "~/Documents/Notes"
 
 # NOTE SETTINGS
 [note]
@@ -38,23 +38,29 @@ id-case = "lower"
 [extra]
 author = "Tyler"
 
-[group.daily]
-# Directories listed here will automatically use this group when creating notes.
-paths = ["daily-journal"]
+[group.personal-journal]
+paths = ["personal-journal"]
+
+[group.dune-journal]
+paths = ["dune-journal"]
 
 [group.dune-weekly]
-paths = ["dune-weekly-update"]
+paths = ["dune-weekly"]
 
 [group.dune-weekly.note]
 filename = "{{format-date (date 'next wednesday') '%Y_W%W'}}"
 extension = "md"
-template = "weekly-update.md"
+template = "dune-weekly.md"
 
-[group.daily.note]
-# %Y-%m-%d is actually the default format, so you could use {{format-date now}} instead.
+[group.dune-journal.note]
 filename = "{{format-date now '%Y_%m_%d'}}"
 extension = "md"
-template = "daily.md"
+template = "dune-journal.md"
+
+[group.personal-journal.note]
+filename = "{{format-date now '%Y_%m_%d'}}"
+extension = "md"
+template = "personal-journal.md"
 
 # MARKDOWN SETTINGS
 [format.markdown]
@@ -85,12 +91,15 @@ recents = "--sort created- --created-after 'last two weeks'"
 
 # COMMAND ALIASES
 [alias]
-plan = "zk new --no-input --date='tomorrow' $ZK_NOTEBOOK_DIR/daily-journal"
-daily = "zk new --no-input $ZK_NOTEBOOK_DIR/daily-journal"
-dune = "zk new --no-input $ZK_NOTEBOOK_DIR/dune-weekly-update"
+dw = "zk new --no-input $ZK_NOTEBOOK_DIR/dune-weekly"
+dune = "zk new --no-input $ZK_NOTEBOOK_DIR/dune-journal"
+me = "zk new --no-input $ZK_NOTEBOOK_DIR/personal-journal"
+tom = "zk new --no-input --date='tomorrow' $ZK_NOTEBOOK_DIR/dune-journal"
 
 # Edit the last modified note.
 edlast = "zk edit --limit 1 --sort modified- $@"
+
+edi = "zk edit -i"
 
 # Edit the notes selected interactively among the notes created the last two weeks.
 recent = "zk edit --sort created- --created-after 'last two weeks' --interactive"

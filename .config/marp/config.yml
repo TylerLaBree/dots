@@ -1,4 +1,4 @@
 allowLocalFiles: true
 pdf: true
 themeSet: /home/tyler/.config/marp/themes
-browserPath: /usr/bin/chromium-browser
+browserPath: /var/lib/flatpak/app/org.chromium.Chromium/current/active/export/bin/org.chromium.Chromium

@@ -48,7 +48,7 @@ paths = ["dune-journal"]
 paths = ["dune-weekly"]
 
 [group.dune-weekly.note]
-filename = "{{format-date (date 'next wednesday') '%Y_W%W'}}"
+filename = "{{format-date (date 'next wednesday') '%Y_W%V'}}"
 extension = "md"
 template = "dune-weekly.md"
 
